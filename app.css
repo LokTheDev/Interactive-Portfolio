@@ -1,0 +1,134 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Spacetype', sans-serif;
+}
+
+
+nav{
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+nav img{
+    width: 50px;
+    height: 50px;
+}
+nav img:hover{
+    cursor: pointer;
+}
+
+.zone{
+    padding-top: 5px;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+    background-image: url("/resource/background.png");
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    transform: 3s;
+}
+
+.dino{
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    top: 225px;
+}
+
+.options{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.target{
+    padding: 5px;
+    border-radius: 8px;
+    font-size: large;
+    background-color: azure;
+}
+
+.range{
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#cannon{
+    position: relative;
+    left:0px;
+    right:0px;
+    width: 50px;
+    background-image: url("/resource/tank.gif");
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;   
+}
+
+.bullet{
+    transition: 1.25s;
+}
+
+.bullet-img{
+    width: 15px;
+    height: 30px;
+}
+
+.controlBar{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+}
+
+#arrow-left{
+    transform: rotate(180deg);
+}
+
+
+.input-btn{
+    margin: 3px 3px;
+}
+
+.input-btn:hover{
+    cursor: pointer;
+}
+
+
+footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+/*Animation*/
+@-webkit-keyframes shake {
+    0% { -webkit-transform: translate(2px, 1px) rotate(0deg); } 
+    10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+    30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+    90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+.shake {
+    -webkit-animation-name: shake;
+    -webkit-animation-duration: 0.5s;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count: infinite;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.cdnfonts.com/css/common-pixel" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/spacetype?styles=144571" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+    
+    <nav>
+        <h3>Lok The Dev</h3>
+        <img id="bgm-btn" src="/resource/bgm-btn.png">
+    </nav>
+
+    <div class="zone">
+
+        <div class="options">
+            <div class="target about">About</div>
+            <div class="target exp">Experience</div>
+            <div class="target project">Project</div>
+            <div class="target contact">Contact</div>
+        </div>
+        
+        <div class="range">
+            <div class="edge">
+            
+            </div>
+
+            <div id="cannon">
+                
+            </div>
+
+            <div class="edge">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="controlBar">
+        <img class="input-btn" id='arrow-left'src="/resource/arrow.png">
+        <img class="input-btn" id='sapceBar'src="/resource/space.png">
+        <img class="input-btn" id='arrow-right'src="/resource/arrow.png">
+    </div>
+
+    <div class="tbd">
+        <h1>More About Me Coming Soon!</h1>
+    </div>
+
+    <footer>
+        <p>Email: Loktl733@gmail.com</p>
+        <p class="infoText">@Lok The Dev</p>
+    </footer>
+
+</body>
+
+
+
+<!--Modal-->
+<div class="modal modal-about">
+    <div class="modal-nav">
+        <h3 class="modal-title">About Me (Lok The Dev)</h3>
+    </div>
+    <div class="modal-content content-about">
+        <div class="modal-content-text">
+            <h4>User: <span class="infoText">Lok </span></h4>
+            <h4>Location: <span class="infoText">Sydney</span></h4>
+            <h4>Education: <span class="infoText">UTS (Master of IT)</span></h4>
+            <h4>Language: <span class="infoText">JavaScript, Python, Swift, C#</span></h4>
+            <h4>Bio:</h4>
+            <div class="bioText">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries, but also the leap into electronic typesetting,remaining essentially unchanged. 
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+            </div>
+        </div>                
+    </div>
+    <div class="modal-footer">
+        <img class="close-btn" src="/resource/power-btn.png" onclick="closeModal('about')">
+    </div>
+</div>
+
+<!--Modal-->
+<div class="modal modal-exp">
+    <div class="modal-nav">
+        <h3 class="modal-title">Experience</h3>
+    </div>
+
+    <div class="modal-content content-exp">
+         
+        <ul role="list">
+            <p>Work</p>
+            <li>2021 - Present</li>
+            <li data-icon="👨🏻‍💻" class="infoText">FullStack - Software Developer at Codisto</li>
+            <li>2019 - 2020</li>
+            <li data-icon="👾" class="infoText">Database Developer at MY-HOME (HK)</li>
+            <br>
+            <p>Education</p>
+            <li>2021 - 2022</li>
+            <li data-icon="👨🏻‍🎓" class="infoText">Master of IT(Software Development) - UTS</li>
+            <li>GPA: 6.33 / 7</li>
+          </ul>
+    </div>
+
+    <div class="modal-footer">
+        <img class="close-btn" src="/resource/power-btn.png" onclick="closeModal('exp')">
+    </div>
+</div>
+
+<!--Modal-->
+<div class="modal modal-project">
+    <div class="modal-nav">
+        <h3 class="modal-title">My Project</h3>
+    </div>
+
+    <div class="modal-content content-project">
+         <h1><img id='git' src="/resource/github.png"> <a target='_blank' href="https://github.com/LokTheDev"> My GitHub </a></h1>
+         <p class="shell infoText"> LokTheDev@Loks-MacBook-Pro ~ % <input placeholder="type ls -la" id="shellCM" type="text"> <button id="shellBtn">Confirm</button> 👈🏻(try) </p> 
+         <div class="animationText"></div>
+         <div class="project-grid">
+            
+            <div class="PJwrap" draggable='true'>
+                <img class="PJimg" src="/resource/python.png">
+                <p class="PJname infoText">Python Automation</p>
+            </div>
+
+            <div class="PJwrap" draggable='true'>
+                <img class="PJimg" src="/resource/game.png">
+                <p class="PJname infoText">JS Frontend</p>
+            </div>
+
+            <div class="PJwrap" draggable='true'>
+                <img class="PJimg" src="/resource/computer.png">
+                <p class="PJname infoText">JS Backend</p>
+            </div>
+
+            <div class="PJwrap" draggable='true'>
+                <img class="PJimg" src="/resource/microsoft.png">
+                <p class="PJname infoText">C# Console</p>
+            </div>
+
+            <div class="PJwrap" draggable='true'>
+                <img class="PJimg" src="/resource/iphone.png">
+                <p class="PJname infoText">Swift App</p>
+            </div>
+
+            <div class="PJwrap" id="droppable">
+                <img id="binImg" class="PJimg" src="/resource/bin.png">
+                <p class="PJname infoText">Bin</p>
+            </div>
+
+         </div>
+
+    </div>
+
+    <div class="modal-footer">
+        <img class="close-btn" src="/resource/power-btn.png" onclick="closeModal('project')">
+    </div>
+</div>
+
+<!--Modal-->
+<div class="modal modal-contact">
+    <div class="modal-nav">
+        <h3 class="modal-title">Contact Me</h3>
+    </div>
+    <p>Loktl733@gmail.com</p>
+    <div class="modal-content content-contact">
+         <a href="https://github.com/LokTheDev/" target="_blank" class="contact-item-a"> <img class="contactimg" src="/resource/github.png"> </a>
+         <a href="https://www.linkedin.com/in/lok-lo-8a17b1208/" target="_blank" class="contact-item-b"> <img class="contactimg" src="/resource/linkedin.png"> </a>
+         <a href="mailto: Loktl733@gmail.com" class="contact-item-c"> <img class="contactimg" src="/resource/email.png"> </a>
+    </div>
+
+    <div class="modal-footer">
+        <img class="close-btn" src="/resource/power-btn.png" onclick="closeModal('contact')">
+    </div>
+</div>
+
+<!--Modal-->
+<div class="modal modal-start">
+    <div class="modal-nav">
+        <h3 class="modal-title">Full Experience</h3>
+    </div>
+
+    <div class="modal-content content-start">
+        <span class='infoText'>
+            <p>Welcome To My Interactive Portfolio!
+                <br>
+            Move Your Tank Using The Left And Right Arrow Key!
+                <br>
+            Fire With You SpaceBar!
+                <br>
+            (Turn On The BGM At Top Right Corner To Get Full Experience!)
+            </p>
+        </span>
+    </div>
+
+    <div class="modal-footer">
+        <img class="close-btn" src="/resource/power-btn.png" onclick="closeModal('start')">
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="/app.js"></script>
+</html>
