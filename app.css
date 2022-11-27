@@ -28,7 +28,7 @@ nav img:hover{
     height: 80vh;
     position: relative;
     overflow: hidden;
-    background-image: url("/resource/background.png");
+    background-image: url("resource/background.png");
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center;  
@@ -69,7 +69,7 @@ nav img:hover{
     left:0px;
     right:0px;
     width: 50px;
-    background-image: url("/resource/tank.gif");
+    background-image: url("resource/tank.gif");
     background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;   
