@@ -13,7 +13,7 @@ $(document).ready(function(){
 //bgm
 const bgmBtn = $('#bgm-btn')
 let bgmOn = false
-let BGM = new Audio("/resource/sound/bgm.mp3");
+let BGM = new Audio("resource/sound/bgm.mp3");
 
 bgmBtn.on('click', function(){
     if(bgmOn == false){
@@ -88,12 +88,12 @@ function fire() {
         let position = $("#cannon").offset();
         position.top -= 15;
         position.left += 18;
-        const animateBullet = $('<div class="bullet shake" > <img class="bullet-img" src="/resource/bullet.png"> </div>');
+        const animateBullet = $('<div class="bullet shake" > <img class="bullet-img" src="resource/bullet.png"> </div>');
         $(animateBullet).css("color", "red");
         $(animateBullet).css("position", "absolute");
         $(animateBullet).css(position);
         $(".zone").append(animateBullet);
-        const snd = new Audio("/resource/sound/lazer.mp3");
+        const snd = new Audio("resource/sound/lazer.mp3");
         snd.volume = 0.5 
         snd.play();
         laserAnimate(animateBullet);
@@ -184,7 +184,7 @@ function blurBG(modal){
 /*Dino Party*/
 
 function bornRex(){
-    const dino = $('<img class="dino shake" src="/resource/blu.png">');
+    const dino = $('<img class="dino shake" src="resource/blu.png">');
     var h = $(".zone").height();
     var w = $(".zone").width();
     var nh = Math.floor(Math.random() * h);
@@ -291,10 +291,10 @@ document.getElementById('droppable').addEventListener('dragenter', function (e) 
 document.getElementById('droppable').addEventListener('dragover', function (e) { e.preventDefault() });
 document.getElementById('droppable').addEventListener('drop', function (e) {
     e.preventDefault(); 
-    const snd = new Audio("/resource/sound/bin.mp3");
+    const snd = new Audio("resource/sound/bin.mp3");
     snd.volume = 0.5 
     snd.play();
-    $("#binImg").attr('src', '/resource/bin-full.png')
+    $("#binImg").attr('src', 'resource/bin-full.png')
     dragged.parentNode.removeChild(dragged);
 });
 
